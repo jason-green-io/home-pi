@@ -11,7 +11,7 @@ LINE2="$(( ( $(date -d "2021/07/01" +%s) - $(date +%s) ) / (3600 * 24) ))d until
 NEW="$LINE0\n$LINE1\n$LINE2\n$LINE3"
 
 if [ "$NEW" != "$OLD" ]; then
-    clear
+    ./cls
     echo -e "$NEW" | toilet -f smblock
     #| /usr/bin/toilet -f smblock -w 62 --gay'
 fi
